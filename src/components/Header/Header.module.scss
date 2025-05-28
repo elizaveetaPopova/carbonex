@@ -1,0 +1,82 @@
+@use '../../styles/variables';
+
+.header {
+  height: variables.$header-height;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: variables.$global-padding;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &-img {
+      height: 51px;
+      width: 172px;
+    }
+  }
+
+  &__nav {
+    height: 100%;
+    display: flex;
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__phone_img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__phone_caption {
+    position: relative;
+    color: variables.$font-gray;
+    cursor: pointer;
+  }
+
+  &__phone_caption::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      variables.$font-gray 0,
+      variables.$font-gray 4px,
+      transparent 4px,
+      transparent 6px
+    );
+    background-repeat: repeat-x;
+  }
+}
