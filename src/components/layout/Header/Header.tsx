@@ -1,6 +1,7 @@
-import logo from '../../assets/images/logo.png';
-import phone from '../../assets/images/phone.svg';
-import Button from '../Button';
+import Button from '../../ui/Button';
+
+import logo from '../../../assets/images/logo.png';
+import phone from '../../../assets/images/phone.svg';
 
 import styles from './Header.module.scss';
 
@@ -37,7 +38,7 @@ const Header = () => {
               Позвонить менеджеру
             </div>
           </div>
-          <Button className="header__button" variant="primary">
+          <Button className="header__button" variant="primary" withBorder>
             Оставить заявку
           </Button>
         </div>
