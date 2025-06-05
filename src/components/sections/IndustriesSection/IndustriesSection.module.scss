@@ -1,0 +1,102 @@
+@use '../../../styles/variables';
+
+.industries-section {
+  &__container {
+    padding: 80px variables.$industries-horizontal-padding;
+    color: variables.$font-dark-gray;
+  }
+
+  &__intro {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: variables.$font-weight-bold;
+    font-family: variables.$font-family-heading;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__industries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 36px;
+    width: 100%;
+  }
+
+  &__industry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__industry:hover,
+  &__industry:hover > &__button {
+    color: variables.$font-blue;
+  }
+
+  &__industry:hover > &__button::after {
+    background-image: repeating-linear-gradient(
+      to right,
+      variables.$font-blue 0,
+      variables.$font-blue 4px,
+      transparent 4px,
+      transparent 6px
+    );
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  &__industry-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: variables.$font-family-heading;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: variables.$font-weight-bold;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    font-family: variables.$font-family-base;
+    height: 25px;
+  }
+
+  &__button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      variables.$font-black 0,
+      variables.$font-black 4px,
+      transparent 4px,
+      transparent 6px
+    );
+    background-repeat: repeat-x;
+  }
+}
