@@ -1,4 +1,5 @@
-$global-padding: 0 calc((100vw - 1400px) / 2);
+$horizontal-padding: calc((100vw - 1400px) / 2);
+$industries-horizontal-padding: calc((100vw - 1387px) / 2);
 
 $screen-height: 100vh;
 $header-height: 101px;
@@ -13,3 +14,6 @@ $font-weight-bold: 700;
 $font-white: #ffffff;
 $font-gray: #888888;
 $font-black: #000000;
+$font-dark-gray: #323232;
+$font-light-gray: #f7f7f7;
+$font-blue: #007fa7;
